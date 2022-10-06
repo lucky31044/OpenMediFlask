@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hacker-earth-ocr",
+  "private_key_id": "3a73e2c36b998a97ab84d4ebce2d95e525d64833",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDTlOdUPws0DLfh\n11MTViAvNvGjS/k7srfOwmr+3TYJz+roeZj+nMlUXa9oNGo6IXWfI2nVBI0iGGhR\n5RRR7qE6TVk+8vvSTKNg0pWolplN16hV5diiQxjYpdt2489/epAcFl7Z7SS2VFZS\n9NPJg82Z+6fLr+q54VHep80UBVX98cP1YMJdGzzGKJK49VFw5aQEa/OBzQsIV6jJ\nCoNR2dVFrn3kwUYVXRxsfVLYT6D9p420fuKcwE/ZW+ruyPVxHZvkOkHtUMJDEefh\nLNAK9geYLr690oZ0COJ3b2cPdpM9VxhuNy+NzkwG/LowsXFzNklPiY8bd287iw+C\nCwYdgQ3TAgMBAAECggEAS2/nTL/PmEbClyilK5tFDWB7JhxT6AeQBo2GBYnMlxIF\nMM8OEBXJqKVggXhSuZgtbkh7luIxCcuHAk/5fz7kSDvEyq9qvq/pfn+GsZ3EWh8+\nmyXAqBXhOXllNs4BsPN7hzAosG2fbczDHH/DNTGjsDesO3Dk8VJXVNoiQfWnE8ul\n+lvE6QzZpbojKtsBlnuukJZZk8NwdUCUo7azbK1+iwd3PeQZydoCqHsAUNzwCAAF\nTeUO8iAX2bD4l8ug7fivNLtgFu9qETGhKDvC6HRSfYS0WiIwWj9QXgRV9mFCIqa/\nr9cAqlevW0nu+UwlLQP1JNeQn+APx0DQ/7CykpW4uQKBgQDqVEgsjwrYDlRTKjKU\nRzcxhJkQR8g5UNO+aeeWPLygpYVcGcL8Movl+Ak6//gJdwbt2zUJ2qMGmk75W4si\nwM8Ki1CqEmdfFQ/iTzYRX3npqxIWDRBgsgmptUpu7QXoCYR4iBa2qSsWHxZMccn6\nuy5AhE5DmwqlwOX3ayqa2ON2OQKBgQDnJhNUMqFlwg8J3lpj90EQP+4fPz6dSRc+\n3Y1kwpWiqRbv1JCijWFU10/ZEcwgAPAjgDEEWuYbcpxbsM8Vj+jAyBdzbGqVlh/t\nafygZX8NvZ2+BI8s70D3b5nMGb/sWjgEcJnvLJpLuYgg9uz1WbHMj47qdfiVAg7o\nkXnaV0PEawKBgQDaixRtClNwwZx/m8FkbS7arfIbLvdcDTgORLNKeQbrRLQl+5jQ\noUu8hSIGtqfcG/iIaYMD17dn9w5kna4cEXqHOPtYQqXKFdikln+0oDkRZw0NJ834\ngNNmRcBPyBtUF1xHFZUpcojOrtubHBzmDSDL5xkfEEBT6p4PrRElLdamcQKBgHIt\n77xWqj0ux+jzCil5OI2DVufegNqHAVGPdUnBiNLpvafIk42IUvzqwsmSLgfdDsIq\nj4v8LtB+I9hzFUgsZyfbbyIX+upbVvgas6yzljg+Yw47CFKE+M2BNjKIwbJJuoQO\n7ysjGDCxvBm0f8aOgPJwM4ODtMA+XQjq24tMMfBzAoGAG+B26rrzpCLb/coSjYA2\nJnOrHlK8giuuOW0XOIYWjIV3QSMUUV/rh1BoyVSaoFs82fZZV+25ZN85e7KkmcfW\nuLn/89fpMw+nOUU1jWWTytzi/rJ27AK/iM8ugCcqBxqwuSXpt6Zh0rOyCfF8BWC5\nfgIlkuDKum1AcMIzGistsZw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "whatsapp-payment-bot@hacker-earth-ocr.iam.gserviceaccount.com",
+  "client_id": "111826474407783526066",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/whatsapp-payment-bot%40hacker-earth-ocr.iam.gserviceaccount.com"
+}

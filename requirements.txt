@@ -1,0 +1,11 @@
+Flask==2.0.1
+Flask-Cors==3.0.10
+Flask-Session==0.4.0
+google-api-core==1.33.1
+google-auth==2.12.0
+google-cloud-vision==1.0.0
+googleapis-common-protos==1.56.4
+twilio==7.14.1
+SQLAlchemy==1.4.41
+sqlparse==0.4.2
+gunicorn 
