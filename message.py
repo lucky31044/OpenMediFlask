@@ -3,8 +3,8 @@ from flask import Response
 import os
 from twilio import rest
 from twilio.rest import Client
-os.environ['TWILIO_ACCOUNT_SID'] = "AC008781540ee7f99dc47e41bc3ab20448"
-os.environ['TWILIO_AUTH_TOKEN'] = "5eb2b6e4d20cf3f14f0f3816f0ece6cd"
+os.environ['TWILIO_ACCOUNT_SID'] = "AC691257116d7e79d5ef694cbb3771f512"
+os.environ['TWILIO_AUTH_TOKEN'] = "ad7df9ff8b6d4fde4c57251d8f137fc2"
 account_sid = os.environ['TWILIO_ACCOUNT_SID']
 auth_token = os.environ['TWILIO_AUTH_TOKEN']
 
