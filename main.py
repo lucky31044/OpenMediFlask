@@ -92,7 +92,7 @@ def main():
                 msg = "Sorry 😕, You are not registered with OpenMedi1"
             
             resp = send_msg(msg)
-            return str(resp)
+            return Response(str(resp),mimetype="application/xml")
 
         elif variables.counter[phone_id] == 1:
             if variables.track[phone_id]['user_type'] == 'Patient':
@@ -101,16 +101,16 @@ def main():
                     resp = send_msg(msg)
                     variables.counter[phone_id] = variables.counter[phone_id] + 1
                     variables.track[phone_id]['flow_type'] = 'add record'
-                    return str(resp)
+                    return Response(str(resp),mimetype="application/xml")
                 elif variables.incoming_msg[phone_id] == "2":
                     msg = PatientData(phone_id)
                     resp = send_msg(msg)
-                    return str(resp)
+                    return Response(str(resp),mimetype="application/xml")
             elif variables.track[phone_id]['user_type'] == 'Doctor':
                 Patient_mobile_no = variables.incoming_msg[phone_id]
                 msg = PatientData(Patient_mobile_no)
                 resp = send_msg(msg)
-                return str(resp)
+                return Response(str(resp),mimetype="application/xml")
 
         elif variables.counter[phone_id] == 2:
             if variables.track[phone_id]['user_type'] == 'Patient':
@@ -119,7 +119,7 @@ def main():
                     variables.track[phone_id]['disease_name'] = variables.incoming_msg[phone_id]
                     resp = send_msg(msg)
                     variables.counter[phone_id] = variables.counter[phone_id] + 1
-                    return str(resp)
+                    return Response(str(resp),mimetype="application/xml")
 
         elif variables.counter[phone_id] == 3:
             if variables.track[phone_id]['user_type'] == 'Patient':
@@ -139,7 +139,7 @@ def main():
                     print('ocr text',text)
 
                     variables.counter[phone_id] = variables.counter[phone_id] + 1
-                    return str(resp)
+                    return Response(str(resp),mimetype="application/xml")
         
         elif variables.counter[phone_id] == 4:
             if variables.track[phone_id]['user_type'] == 'Patient':
@@ -156,7 +156,7 @@ def main():
                     #process incoming image here
 
                     variables.counter[phone_id] = variables.counter[phone_id] + 1
-                    return str(resp)
+                    return Response(str(resp),mimetype="application/xml")
 
 
 
