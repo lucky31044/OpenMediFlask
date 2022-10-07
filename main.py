@@ -85,47 +85,47 @@ def main():
             variables.track[phone_id]['user_type'] = user_type
 
             if user_type == 'Doctor':
-                msg = "Hello Welcome to *OpenMedi1* 🏥 \n\nWe have detected you are a *Doctor* 🩺 \n\nWhich Patient 😷 record would you like to fetch 📋, \n\nPlease Enter their Patient Id 🔢"    
+                msg = "Hello Welcome to *OpenMedi1*  \n\nWe have detected you are a *Doctor*  \n\nWhich Patient  record would you like to fetch , \n\nPlease Enter their Patient Id "    
             elif user_type == "Patient":
-                msg = "Hello Welcome to *OpenMedi1* 🏥 \n\nWe have detected you are a *Patient* \n\n What would you like to do today ? \n\n1️⃣ Add a medical record to the OpenMedi Centralised Database. 🖥️\n\n2️⃣ Fetch your medical records 📋"
+                msg = "Hello Welcome to *OpenMedi1*  \n\nWe have detected you are a *Patient* \n\n What would you like to do today ? \n\n 1. Add a medical record to the OpenMedi Centralised Database. \n\n 2. Fetch your medical records "
             else :
-                msg = "Sorry 😕, You are not registered with OpenMedi1"
+                msg = "Sorry , You are not registered with OpenMedi1"
             
-            resp = send_msg(msg)
-            return Response(str(resp),mimetype="application/xml")
+            send_msg(msg,phone_id)
+            return '200'
 
         elif variables.counter[phone_id] == 1:
             if variables.track[phone_id]['user_type'] == 'Patient':
                 if variables.incoming_msg[phone_id] == "1":
-                    msg = "What are you suffering from 🤒 ? "
-                    resp = send_msg(msg)
+                    msg = "What are you suffering from  ? "
+                    send_msg(msg,phone_id)
                     variables.counter[phone_id] = variables.counter[phone_id] + 1
                     variables.track[phone_id]['flow_type'] = 'add record'
-                    return Response(str(resp),mimetype="application/xml")
+                    return '200'
                 elif variables.incoming_msg[phone_id] == "2":
                     msg = PatientData(phone_id)
-                    resp = send_msg(msg)
-                    return Response(str(resp),mimetype="application/xml")
+                    send_msg(msg,phone_id)
+                    return '200'
             elif variables.track[phone_id]['user_type'] == 'Doctor':
                 Patient_mobile_no = variables.incoming_msg[phone_id]
                 msg = PatientData(Patient_mobile_no)
-                resp = send_msg(msg)
-                return Response(str(resp),mimetype="application/xml")
+                send_msg(msg,phone_id)
+                return '200'
 
         elif variables.counter[phone_id] == 2:
             if variables.track[phone_id]['user_type'] == 'Patient':
                 if variables.track[phone_id]['flow_type'] == 'add record':
-                    msg = "Send a photo of Doctor Prescription 📋"
+                    msg = "Send a photo of Doctor Prescription "
                     variables.track[phone_id]['disease_name'] = variables.incoming_msg[phone_id]
-                    resp = send_msg(msg)
+                    send_msg(msg,phone_id)
                     variables.counter[phone_id] = variables.counter[phone_id] + 1
-                    return Response(str(resp),mimetype="application/xml")
+                    return '200'
 
         elif variables.counter[phone_id] == 3:
             if variables.track[phone_id]['user_type'] == 'Patient':
                 if variables.track[phone_id]['flow_type'] == 'add record':
-                    msg = "Enter Doctor's name 👩🏻‍⚕️"
-                    resp = send_msg(msg)
+                    msg = "Enter Doctor's name "
+                    send_msg(msg,phone_id)
 
                     #process incoming image here
                     pic_url = request.form.get('MediaUrl0')
@@ -139,7 +139,7 @@ def main():
                     print('ocr text',text)
 
                     variables.counter[phone_id] = variables.counter[phone_id] + 1
-                    return Response(str(resp),mimetype="application/xml")
+                    return '200'
         
         elif variables.counter[phone_id] == 4:
             if variables.track[phone_id]['user_type'] == 'Patient':
@@ -151,12 +151,12 @@ def main():
                     print('strpasstoprescription',strpasstoprescription)
                     InsertPrescription(strpasstoprescription)
 
-                    msg = "Record added to the Database for " +variables.track[phone_id]['Hospitalnamefromocr']+ ", Thank you 😄"
-                    resp = send_msg(msg)
+                    msg = "Record added to the Database for " +variables.track[phone_id]['Hospitalnamefromocr']+ ", Thank you "
+                    send_msg(msg,phone_id)
                     #process incoming image here
 
                     variables.counter[phone_id] = variables.counter[phone_id] + 1
-                    return Response(str(resp),mimetype="application/xml")
+                    return '200'
 
 
 
