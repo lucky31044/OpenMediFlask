@@ -3,40 +3,24 @@ from flask import Response
 import os
 from twilio import rest
 from twilio.rest import Client
-os.environ['TWILIO_ACCOUNT_SID'] = "AC691257116d7e79d5ef694cbb3771f512"
-os.environ['TWILIO_AUTH_TOKEN'] = "ad7df9ff8b6d4fde4c57251d8f137fc2"
+os.environ['TWILIO_ACCOUNT_SID'] = ""
+os.environ['TWILIO_AUTH_TOKEN'] = ""
 account_sid = os.environ['TWILIO_ACCOUNT_SID']
 auth_token = os.environ['TWILIO_AUTH_TOKEN']
 
 
-# def send_msg(phone_id,st):
-#     resp = MessagingResponse()
-#     msg = resp.message()
-#     msg.body(st)
-
-#     print("####### In Msg ########")
-#     print(st)
-#     responded = True
-#     return resp
-
 client = Client(account_sid, auth_token)
 
-def send_msg(phone_id,st):
+def send_msg(st):
     resp = MessagingResponse()
     msg = resp.message()
     msg.body(st)
 
-    message = client.messages.create(
-                              body=st,
-                              from_='whatsapp:+14155238886',
-                              to='whatsapp:+91'+phone_id
-                          )
-
-    # print("####### In Msg ########")
-    # print(st)
-    # responded = True
-    # return resp
-
+    print("####### In Msg ########")
+    
+    responded = True
+    return resp
+    
 def send_template_msg(phone_id,st):
     client = rest.Client(account_sid, auth_token)
     message = client.messages.create(
